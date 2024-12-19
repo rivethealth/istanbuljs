@@ -16,6 +16,6 @@ module.exports = {
     relativeTo(file, origFile) {
         return path.isAbsolute(file)
             ? file
-            : path.resolve(path.dirname(origFile), file);
+            : path.resolve(path.dirname(origFile), path.basename(file));
     }
 };
